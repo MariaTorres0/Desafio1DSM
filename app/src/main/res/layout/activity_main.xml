@@ -2,39 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="24dp"
     android:background="@color/gray">
 
-    <!-- Título centrado con mejor estilo -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Desafío práctico 1 - DSM"
-        android:textSize="26sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="152dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="Desafío práctico 1 - DSM"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Botón de cálculo de promedio con bordes redondeados y sombra -->
-
-    <!-- Botón de descuento salarial con bordes redondeados y sombra -->
-
-    <!-- Botón de calculadora con bordes redondeados y sombra -->
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnPromedio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="348dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/pastel_blue"
@@ -90,10 +85,10 @@
         android:layout_marginBottom="31dp"
         app:layout_constraintBottom_toTopOf="@+id/btnPromedio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.876"
         app:srcCompat="@drawable/desafio1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
