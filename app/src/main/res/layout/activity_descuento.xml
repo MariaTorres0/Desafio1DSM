@@ -6,15 +6,95 @@
     android:id="@+id/descuento"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/gray"
     tools:context=".DescuentoActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Descuento"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:text="Descuentos salariales"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgDescuento"
+        android:layout_width="292dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/descuentos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <EditText
+        android:id="@+id/edtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Nombre del empleado"
+        android:padding="16dp"
+        android:textColor="@color/gray_medium"
+        android:backgroundTint="@color/gray_medium"
+        android:textColorHint="@color/gray_medium"
+        android:textColorHighlight="#63FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgDescuento" />
+
+    <EditText
+        android:id="@+id/edtSalario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Salario base"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:textColor="@color/gray_medium"
+        android:backgroundTint="@color/gray_medium"
+        android:textColorHint="@color/gray_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNombre" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular descuentos"
+        android:background="@drawable/button_rounded"
+        android:textColor="@color/white"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/edtSalario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:background="@drawable/result_background"
+        android:gravity="start"
+        android:text="Resultado..."
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:elevation="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="48dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnCalcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

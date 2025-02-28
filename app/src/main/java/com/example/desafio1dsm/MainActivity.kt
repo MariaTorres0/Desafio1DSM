@@ -2,6 +2,8 @@ package com.example.desafio1dsm
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -22,17 +24,22 @@ class MainActivity : AppCompatActivity() {
         val btnDescuento = findViewById<Button>(R.id.btnDescuento)
         val btnCalculadora = findViewById<Button>(R.id.btnCalculadora)
 
+        val buttonClickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click)
+
         btnPromedio.setOnClickListener {
+            btnPromedio.startAnimation(buttonClickAnimation)
             val intent = Intent(this, PromedioActivity::class.java)
             startActivity(intent)
         }
 
         btnDescuento.setOnClickListener {
+            btnDescuento.startAnimation(buttonClickAnimation)
             val intent = Intent(this, DescuentoActivity::class.java)
             startActivity(intent)
         }
 
         btnCalculadora.setOnClickListener {
+            btnCalculadora.startAnimation(buttonClickAnimation)
             val intent = Intent(this, CalculadoraActivity::class.java)
             startActivity(intent)
         }

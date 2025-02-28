@@ -1,10 +1,13 @@
 package com.example.desafio1dsm
 
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import android.widget.Toast
 
 class PromedioActivity : AppCompatActivity() {
 
@@ -20,7 +23,11 @@ class PromedioActivity : AppCompatActivity() {
         val etNota5 = findViewById<EditText>(R.id.etNota5)
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
 
+        val buttonClickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click)
+
         btnCalcular.setOnClickListener {
+            btnCalcular.startAnimation(buttonClickAnimation)
+
             val nombre = etNombre.text.toString()
             val notas = listOf(
                 etNota1.text.toString().toDoubleOrNull(),
@@ -32,13 +39,7 @@ class PromedioActivity : AppCompatActivity() {
 
             // Verificar si todas las notas son válidas
             if (notas.any { it == null || it < 0 || it > 10 }) {
-                MaterialAlertDialogBuilder(this)
-                    .setTitle("Error")
-                    .setMessage("Las notas deben estar entre 0 y 10 y ser números válidos.")
-                    .setPositiveButton("Cerrar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .show()
+                Toast.makeText(this, "Las notas deben estar entre 0 y 10.", Toast.LENGTH_SHORT).show()
             } else {
                 // Calcular el promedio
                 val promedio = (notas[0]!! * 0.15) + (notas[1]!! * 0.15) + (notas[2]!! * 0.20) + (notas[3]!! * 0.25) + (notas[4]!! * 0.25)
