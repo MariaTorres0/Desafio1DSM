@@ -1,6 +1,6 @@
 <!-- res/values/strings.xml -->
 <resources>
-    <string name="app_name">Calculadora básica</string>
+    <string name="app_name">Desafio 1</string>
     <string name="hint_input">Ingresa un número</string>
     <string name="add">Sumar</string>
     <string name="subtract">Restar</string>

@@ -67,6 +67,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
+            android:textColor="@color/white"
             android:text="@string/add" />
 
         <Button
@@ -75,6 +76,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
+            android:textColor="@color/white"
             android:text="@string/subtract" />
     </LinearLayout>
 
@@ -90,6 +92,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
+            android:textColor="@color/white"
             android:text="@string/multiply" />
 
         <Button
@@ -98,6 +101,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
+            android:textColor="@color/white"
             android:text="@string/divide" />
     </LinearLayout>
 
@@ -113,6 +117,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
+            android:textColor="@color/white"
             android:text="@string/exponent" />
 
         <Button
@@ -121,6 +126,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
+            android:textColor="@color/white"
             android:text="@string/sqrt" />
     </LinearLayout>
 
