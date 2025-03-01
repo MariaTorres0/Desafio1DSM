@@ -23,10 +23,8 @@ class PromedioActivity : AppCompatActivity() {
         val etNota5 = findViewById<EditText>(R.id.etNota5)
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
 
-        val buttonClickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click)
 
         btnCalcular.setOnClickListener {
-            btnCalcular.startAnimation(buttonClickAnimation)
 
             val nombre = etNombre.text.toString()
             val notas = listOf(
@@ -41,7 +39,7 @@ class PromedioActivity : AppCompatActivity() {
             if (notas.any { it == null || it < 0 || it > 10 }) {
                 Toast.makeText(this, "Las notas deben estar entre 0 y 10.", Toast.LENGTH_SHORT).show()
             } else {
-                // Calcular el promedio
+                // Calculos para obtener el promedio
                 val promedio = (notas[0]!! * 0.15) + (notas[1]!! * 0.15) + (notas[2]!! * 0.20) + (notas[3]!! * 0.25) + (notas[4]!! * 0.25)
 
                 // Aproximar a un solo decimal

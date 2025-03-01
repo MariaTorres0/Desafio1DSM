@@ -27,14 +27,11 @@ class DescuentoActivity : AppCompatActivity() {
         btnCalcular = findViewById(R.id.btnCalcular)
         txtResultado = findViewById(R.id.txtResultado)
 
-        val buttonClickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click)
-
         btnCalcular.setOnClickListener {
-            btnCalcular.startAnimation(buttonClickAnimation)
             calcularDescuentos()
         }
     }
-
+    //Verificar que los datos sean ingresados correctamente
     private fun calcularDescuentos() {
         val nombre = edtNombre.text.toString()
         val salarioTexto = edtSalario.text.toString()
@@ -50,11 +47,13 @@ class DescuentoActivity : AppCompatActivity() {
             return
         }
 
+        //Calculos para obtener descuentos
         val afp = salario * 0.0725
         val isss = salario * 0.03
         val renta = calcularRenta(salario)
         val salarioNeto = salario - afp - isss - renta
 
+        //Mostrar resultados
         val resultado = """
             <b>Nombre:</b> $nombre<br>
             <b>Salario base:</b> $${decimalFormat.format(salario)}<br>
@@ -67,6 +66,7 @@ class DescuentoActivity : AppCompatActivity() {
         txtResultado.text = Html.fromHtml(resultado)
     }
 
+    //Calculos según tramo en renta
     private fun calcularRenta(salario: Double): Double {
         return when {
             salario <= 472 -> 0.0
